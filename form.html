@@ -9,55 +9,58 @@
 <body>
     <div class="container">
         <div class="img-container">
-            <img class="logo" src="/images/logo.png" alt="">
+            <a href="https://github.com/ThiagoMDuarte/sign-up-form-TOP">
+                <img class="logo" src="/images/logo.png" alt="">
+            </a>
+            
             <img id="background-img" src="/images/background-portrait.png" alt="">
         </div>
 
         <div class="data-container">
             <div class="head-text">
-                <h1>This is not a real online service! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum qui, modi vel. <br><br>You know you want to.</h1>
+                <h1>Pepe The Frog became a symbol of internet culture, from harmless meme to a figure often misunderstood. Whether it's joy, confusion, or sadness, Pepe's many faces continue to evoke emotion. <br><br>Do you recognize him?</h1>
             </div>
 
             <div class="form-container">
                 <div>
                     <form action="#" method="post">
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name">
+                        <input minlength="3" required placeholder="Pepe" type="text" id="first_name">
                     </form>
                 </div>
 
                 <div>
                     <form action="#" method="post">
                         <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name">
+                        <input required minlength="3" placeholder="The Frog" type="text" id="last_name">
                     </form>
                 </div>
 
                 <div>
                     <form action="#" method="post">
                         <label for="user_email">Email</label>
-                        <input type="email" name="email" id="user_email">
+                        <input required placeholder="PepeTheFrog@email.com" type="email" name="email" id="user_email">
                     </form>
                 </div>
 
                 <div>
                     <form action="#" method="post">
                         <label for="user_phone">Phone Number</label>
-                        <input type="tel" name="phone_number" id="user_phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+                        <input required placeholder="99 99999 9999" type="tel" name="phone_number" id="user_phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
                     </form>
                 </div>
 
                 <div>
                     <form action="#" method="post">
                         <label for="user_password">Password</label>
-                        <input type="password" name="password" id="user_password">
+                        <input required type="password" name="password" id="user_password">
                     </form>
                 </div>
 
                 <div>
                     <form action="#" method="post">
                         <label for="confirm_user_password">Confirm Password</label>
-                        <input type="password" name="confirm_password" id="confirm_user_password">
+                        <input required type="password" name="confirm_password" id="confirm_user_password">
                     </form>
                 </div>
 
@@ -67,6 +70,7 @@
                     </form>
                 </div>
             </div>
+            <p>Already have an Account? <a class="login" href="http://">Log In</a></p>
         </div>
     </div>
 </body>

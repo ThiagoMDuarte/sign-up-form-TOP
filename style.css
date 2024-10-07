@@ -79,6 +79,7 @@ body {
     flex-basis: 48%;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
 }
 
 input, button {
@@ -95,6 +96,7 @@ button {
     cursor: pointer;
     border-radius: 8%;
     width: 50%;
+    font-weight: bold;
 }
 
 button:hover {
@@ -106,4 +108,34 @@ h1 {
     font-size: 3vh;
     margin-bottom: 20px;
     color: #000000;
+}
+
+input::placeholder {
+    color: var(--font-color);
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do input em foco */
+    outline: none; /* Remove o outline padrão para evitar sobreposição */
+}
+
+input:invalid:focus {
+    border-color: #ff1a1a; /* Mantém a borda vermelha em inputs inválidos */
+    background-color: #ffe6e6;
+    color: #000000;
+    box-shadow: 0 0 5px rgba(255, 26, 26, 0.5); /* Sombra mais forte em campos inválidos */
+}
+
+input:valid:focus {
+    border-color: #28a745; /* Mantém a borda verde em inputs válidos */
+    background-color: #e6ffe6;
+    color: #000000;
+    box-shadow: 0 0 5px var(--background-light); /* Sombra suave com tonalidade verde em campos válidos */
+}
+p {
+    color: var(--font-color);
+    font-weight: bold;
+}
+.login {
+    color: var(--background-dark);
 }
