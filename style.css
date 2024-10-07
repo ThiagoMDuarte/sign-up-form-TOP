@@ -3,8 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --background-dark: rgb(44, 64, 7);
+    --background-light: rgb(170, 205, 105);
+    --font-color: #000000;
+}
 
 html, body {
+    background: linear-gradient(to right, var(--background-dark), var(--background-light));
+    color: var(--font-color);
+
     height: 100%;
     overflow: hidden; /* Remove as barras de rolagem */
 }
@@ -22,7 +30,7 @@ body {
     display: flex;
     width: 100vw; /* Ocupa toda a largura da viewport */
     height: 100vh; /* Ocupa toda a altura da viewport */
-    gap: 2vw; /* Espaço flexível entre img-container e data-container */
+    gap: 5vw; /* Espaço flexível entre img-container e data-container */
 }
 
 .img-container {
@@ -40,7 +48,7 @@ body {
 
 .logo {
     position: absolute;
-    top: 70%; /* 30% do topo */
+    top: 70%; 
     left: 50%;
     transform: translateX(-50%);
     max-width: 30%; /* Ajusta o tamanho do logo para ser responsivo */
@@ -54,33 +62,48 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 10vw;
+    gap: 15px;
 }
 
 .form-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 20px;
+    justify-content: space-between;
+
+}
+
+.form-container div {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
 input, button {
     padding: 10px;
     width: 100%;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
 button {
-    background-color: #007BFF;
+    background-color: var(--background-dark);
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8%;
+    width: 50%;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--background-light);
+    color: var(--font-color)
 }
 
 h1 {
     font-size: 3vh;
     margin-bottom: 20px;
+    color: #000000;
 }
